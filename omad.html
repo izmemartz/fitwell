@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMAD Guide – FitWell</title>
+    <link rel="stylesheet" href="omad.css">
+</head>
+<body>
+
+<!-- TEMP BACKGROUND -->
+<div id="temp-bg"></div>
+
+<!-- HEADER -->
+<header class="nav-blur">
+    <div class="logo">
+        <a href="home.html"><img src="img/fitwell_logo1.PNG" class="logo-img"></a>
+    </div>
+
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="fitpal.html" class="cta">FitPal AI</a>
+    </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero scroll-fade">
+    <h1>OMAD Guide</h1>
+    <p>One Meal A Day: a simplified eating method focused on discipline, nutrient density, and metabolic efficiency.</p>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="cutting-container">
+
+    <!-- INTRO -->
+    <section class="cutting-section intro scroll-fade">
+        <h2>What is OMAD?</h2>
+        <p>
+            OMAD stands for <strong>One Meal A Day</strong>, a fasting method where all calories are consumed within a
+            single meal window. People choose OMAD to improve discipline, simplify nutrition, boost fat-burning,
+            and maintain lean muscle while eating nutrient-rich meals.
+        </p>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="cutting-section light-green">
+        <h2>Benefits of OMAD</h2>
+
+        <div class="info-card full-width">
+            <div class="info-text">
+                <h3>Metabolic Improvement</h3>
+                <p>
+                    OMAD helps improve insulin sensitivity and promotes fat loss while preserving muscle mass.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-card full-width">
+            <div class="info-text">
+                <h3>Time & Discipline</h3>
+                <p>
+                    With one meal per day, meal planning becomes easier, and it helps build discipline and focus.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OMAD MEAL PLAN -->
+<section class="cutting-section light-green-alt">
+    <h2>Simple OMAD Meal Plan (One Full Balanced Meal)</h2>
+
+    <div class="meal-grid">
+        <div class="meal-card">
+            <h3>Main Plate</h3>
+            <p>• Lean protein (chicken breast, beef, or tofu)<br>
+               • 1-2 cups vegetables<br>
+               • 1 cup rice, pasta, or potatoes</p>
+        </div>
+
+        <div class="meal-card">
+            <h3>Side Options</h3>
+            <p>• Salad with olive oil dressing<br>
+               • Soup (chicken, vegetable, or miso)<br>
+               • Fruit cup</p>
+        </div>
+
+        <div class="meal-card">
+            <h3>Healthy Fats</h3>
+            <p>• Avocado slices<br>
+               • Nuts (almonds/cashews)<br>
+               • Olive oil or peanut butter</p>
+        </div>
+
+        <div class="meal-card">
+            <h3>After-Meal</h3>
+            <p>• Greek yogurt<br>
+               • Protein shake (optional)<br>
+               • Dark chocolate (1–2 squares)</p>
+        </div>
+    </div>
+</section>
+
+    <!-- RECIPE -->
+    <section class="cutting-section light-green-alt recipe-section scroll-fade">
+        <h2>Proper OMAD Meal</h2>
+
+        <div class="recipe-box">
+            <div class="recipe-img">
+                <img src="img/omad1.jpg" alt="OMAD Chicken Bowl">
+            </div>
+
+            <div class="recipe-content">
+                <h3>CHICKEN BURRITO BOWL</h3>
+
+                <h4>Ingredients</h4>
+                <p>
+                    Roasted chicken, olive oil, cilantro, sour cream, avocado, fresh lime juice,  
+                    hot chili peppers, tomato, cucumber, cheddar cheese, paprika, dried oregano,  
+                    ground cumin, sea salt, and black pepper.
+                </p>
+
+                <h4>Method</h4>
+                <ol>
+                    <li>Season chicken with olive oil, salt, pepper, paprika, garlic powder, and cumin. Bake at 400°F (200°C) for 20–25 minutes.</li>
+                    <li>Cook rice while preparing toppings: corn, black beans, shredded lettuce, salsa, chopped tomatoes, cheese, and avocado.</li>
+                    <li>Slice baked chicken into strips or cubes. Assemble bowl with rice, beans, corn, chicken, vegetables, salsa, and cheese.</li>
+                    <li>Optional: Bake the assembled bowl for 5–8 minutes to melt the cheese and warm everything together.</li>
+                </ol>
+
+                <h4>Nutritional Info (per bowl)</h4>
+                <table class="nutrition-table">
+                    <tr>
+                        <th></th><th>Chicken Burrito Bowl</th>
+                    </tr>
+                    <tr>
+                        <td>Calories</td><td>1087</td>
+                    </tr>
+                    <tr>
+                        <td>Protein</td><td>81g</td>
+                    </tr>
+                    <tr>
+                        <td>Fat</td><td>75g</td>
+                    </tr>
+                    <tr>
+                        <td>Carbs</td><td>10g</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- OMAD TIPS -->
+    <section class="cutting-section tips bg-photo tips-bg scroll-fade">
+        <h2 class="tips-title">OMAD Tips</h2>
+        <ul>
+            <li>Stay hydrated throughout the day.</li>
+            <li>Choose nutrient-dense foods for your single meal.</li>
+            <li>Include protein and healthy fats to stay full.</li>
+            <li>Keep electrolytes balanced: sodium, potassium, magnesium.</li>
+            <li>Be consistent, your body adapts over time.</li>
+        </ul>
+    </section>
+
+</div>
+
+<script>
+    const faders = document.querySelectorAll('.scroll-fade');
+
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(el => appearOnScroll.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* GLOBAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background: #0d0d0d;
+    text-align: justify;
+}
+
+/* TEMPORARY BACKGROUND */
+#temp-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6ebde2, #0e202c);
+    z-index: -1;
+}
+
+/* NAVIGATION */
+header.nav-blur {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.25);
+    border-radius: 14px;
+    z-index: 20;
+}
+
+.logo-img { height: 55px; }
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: #4fc3f7; }
+
+/* CTA BUTTON */
+.cta {
+    padding: 8px 20px;
+    background: #4fc3f7;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* PAGE HERO (WITH BACKGROUND IMAGE) */
+.page-hero {
+    padding-top: 160px;
+    text-align: center;
+    padding-bottom: 80px;
+    background: url("img/gym1.jpg") center/cover no-repeat;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* Text above overlay */
+.page-hero h1,
+.page-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero h1 {
+    font-size: 3.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #f7fdff;
+    text-align: center;
+}
+
+.page-hero p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 15px;
+}
+
+/* WORKOUT SECTIONS */
+.workout-container { width: 100%; }
+
+.workout-section {
+    width: 100%;
+    padding: 80px 10%;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+/* Section Titles */
+.workout-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Section Backgrounds */
+.ppl-day, .push-day { 
+    background: linear-gradient(135deg, #e7e4e4, #72c4eb);
+    color: #111; 
+}
+
+.pull-day, .legs-day {
+    background: linear-gradient(135deg, #e7e4e4, #72c4eb);
+    color: #111; 
+}
+
+/* "What is PPL" Text */
+.ppl-day p { 
+    font-size: 1.6rem;
+    line-height: 2; 
+}
+
+/* Exercise Card */
+.exercise-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+    transition: 0.3s;
+    text-align: justify;
+}
+
+.exercise-card:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-5px);
+}
+
+.exercise-info { flex: 1 1 350px; }
+
+.exercise-info h3 { 
+    font-size: 1.9rem; 
+    margin-bottom: 15px; 
+    font-weight: 700;
+}
+
+.exercise-info p { 
+    font-size: 1.35rem; 
+    line-height: 1.9; 
+}
+
+/* Exercise Video */
+.exercise-video {
+    flex: 1 1 350px; 
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: rgba(0,0,0,0.35);
+    border-radius: 16px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+
+.exercise-video video, 
+.exercise-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* SCROLL FADE ANIMATION */
+.scroll-fade { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: 0.8s ease-out; 
+}
+
+.scroll-fade.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header.nav-blur { 
+        flex-direction: column; 
+        padding: 15px 5%; 
+    }
+
+    .page-hero h1 { font-size: 2.8rem; }
+    .page-hero p { font-size: 1.4rem; }
+
+    .workout-section { padding: 50px 6%; }
+
+    .exercise-card { 
+        flex-direction: column; 
+        padding: 30px; 
+    }
+
+    .exercise-video { 
+        margin-left: 0; 
+        margin-top: 25px; 
+        min-height: 250px; 
+        max-width: 100%; 
+    }
+
+    .exercise-info h3 { font-size: 1.7rem; }
+    .exercise-info p { font-size: 1.25rem; line-height: 1.7; }
+
+    .nav-links { gap: 28px; }
+}

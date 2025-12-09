@@ -1,0 +1,289 @@
+/* GLOBAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background: #0d0d0d;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+#temp-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #ffffff, #a5f5c2);
+    z-index: -1;
+}
+
+/* NAV BAR */
+header.nav-blur {
+    position: fixed;
+    top: 0; width: 100%;
+    padding: 12px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.25);
+    border-radius: 14px;
+    z-index: 20;
+}
+
+.logo-img { height: 55px; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: #4fc3f7; }
+
+.cta {
+    padding: 8px 20px;
+    background: #4fc3f7;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* HERO */
+.page-hero {
+    padding: 160px 10% 80px;
+    text-align: center;
+    background: url("img/bgomad.jpg") center/cover no-repeat;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+.page-hero h1,
+.page-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #e7ffe9;
+}
+
+.page-hero p { font-size: 1.4rem; }
+
+/* SECTIONS */
+.cutting-container { width: 100%; }
+.cutting-section {
+    padding: 80px 10%;
+    text-align: justify;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cutting-section h2 {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+}
+
+.cutting-section p {
+    font-size: 1.6rem;
+    line-height: 2;
+    color: #111;
+}
+
+/* LIGHT GREEN BACKGROUNDS */
+.light-green {
+    background: linear-gradient(135deg, #ffffff, #a5f5c2);
+    color: #111;
+}
+
+.light-green-alt {
+    background: linear-gradient(135deg, #ffffff, #a5f5c2);
+    color: #111;
+}
+
+/* CARDS */
+.info-card {
+    display: flex;
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+}
+
+.meal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.meal-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+    transition: 0.3s;
+    text-align: justify;
+}
+
+.meal-card:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-5px);
+}
+.meal-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.info-text h3 { font-size: 1.9rem; margin-bottom: 15px; }
+.info-text p { font-size: 1.3rem; }
+
+.info-card.full-width { display: block; padding: 40px 20px; }
+.info-card.full-width .info-text { margin-left: 0; }
+
+/* RECIPE BOX */
+.recipe-box {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255,255,255,0.25);
+    border-radius: 16px;
+    padding: 40px;
+    gap: 30px;
+    color: #111;
+}
+
+.recipe-img {
+    flex: 1 1 300px;
+    max-width: 40%;
+}
+
+.recipe-img img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.recipe-content {
+    flex: 1 1 400px;
+}
+
+.recipe-content h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.recipe-content h4 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.recipe-content p,
+.recipe-content li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.recipe-content ol { margin-left: 20px; }
+
+/* TABLE */
+.nutrition-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+/* TIPS LIST */
+.tips ul { margin-left: 20px; }
+.tips li {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+/* SCROLL ANIMATIONS */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nutrition-table td:nth-child(1) {
+    font-weight: 700; /* makes the values bold */
+}
+
+.bg-photo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bg-photo::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+.bg-photo > * {
+    position: relative;
+    z-index: 2;
+}
+
+.tips-bg {
+    background-image: url("img/omad2.jpg");
+}
+
+.tips-title {
+    color: #ffffff !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .recipe-img { max-width: 45%; }
+}
+
+@media (max-width: 768px) {
+    header.nav-blur { flex-direction: column; }
+    .info-card { flex-direction: column; }
+    .recipe-box { flex-direction: column; padding: 25px; }
+    .recipe-img img { max-width: 100%; margin-bottom: 20px; }
+}

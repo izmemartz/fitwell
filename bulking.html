@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulking Guide – FitWell</title>
+    <link rel="stylesheet" href="bulking.css">
+</head>
+<body>
+
+<!-- TEMP BACKGROUND -->
+<div id="temp-bg"></div>
+
+<!-- HEADER -->
+<header class="nav-blur">
+    <div class="logo">
+        <a href="home.html"><img src="img/fitwell_logo1.PNG" class="logo-img"></a>
+    </div>
+
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="fitpal.html" class="cta">FitPal AI</a>
+    </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero scroll-fade">
+    <h1>Bulking Guide</h1>
+    <p>Gain muscle mass effectively through a calorie surplus, proper nutrition, and consistent strength training.</p>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="cutting-container">
+
+    <!-- WHAT IS BULKING -->
+    <section class="cutting-section intro scroll-fade">
+        <h2>What is Bulking?</h2>
+        <p>
+            Bulking is a fitness phase focused on building muscle mass. This is done through a calorie surplus,
+            high-protein intake, progressive strength training, and proper recovery. Bulking is about strategic
+            nutrition and training to maximize muscle growth without gaining excessive fat.
+        </p>
+    </section>
+
+    <!-- CALORIE SURPLUS -->
+    <section class="cutting-section light-green">
+        <h2>Calorie Surplus Basics</h2>
+
+        <div class="info-card full-width">
+            <div class="info-text">
+                <h3>The Smart Surplus</h3>
+                <p>
+                    Aim for <strong>250–500 extra calories above maintenance</strong> daily. This ensures muscle growth
+                    while minimizing fat gain. Focus on nutrient-dense foods that support training and recovery.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-card full-width">
+            <div class="info-text">
+                <h3>Protein Priority</h3>
+                <p>
+                    Protein is crucial for muscle repair and growth. Target <strong>1.6–2.2g per kg of bodyweight</strong>.
+                    Include lean meats, fish, eggs, dairy, legumes, and plant-based proteins in every meal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAMPLE MEAL PLAN -->
+    <section class="cutting-section light-green-alt">
+        <h2>Simple Bulking Meal Plan (2500–2800 kcal)</h2>
+
+        <div class="meal-grid">
+            <div class="meal-card">
+                <h3>Breakfast</h3>
+                <p>• Oatmeal with milk and nuts<br>
+                   • 3 boiled eggs<br>
+                   • Smoothie with protein powder</p>
+            </div>
+
+            <div class="meal-card">
+                <h3>Lunch</h3>
+                <p>• Grilled chicken or beef<br>
+                   • 1–2 cups veggies<br>
+                   • 1 cup rice or pasta</p>
+            </div>
+
+            <div class="meal-card">
+                <h3>Dinner</h3>
+                <p>• Salmon or lean meat<br>
+                   • Mixed greens<br>
+                   • Sweet potato or quinoa</p>
+            </div>
+
+            <div class="meal-card">
+                <h3>Snacks</h3>
+                <p>• Greek yogurt<br>
+                   • Nuts (handful)<br>
+                   • Protein bar or shake</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BULKING RECIPE -->
+    <section class="cutting-section light-green-alt recipe-section scroll-fade">
+        <h2>Muscle-Building Recipe</h2>
+
+        <div class="recipe-box">
+            <div class="recipe-img">
+                <img src="img/bulking1.jpg" alt="High-Protein Chicken Bowl">
+            </div>
+
+            <div class="recipe-content">
+                <h3>HIGH-PROTEIN CHICKEN BOWL</h3>
+
+                <h4>Ingredients</h4>
+                <p>
+                    • 200g chicken breast<br>
+                    • 1 cup brown rice<br>
+                    • 1 cup steamed broccoli<br>
+                    • 1 tbsp olive oil<br>
+                    • Salt, pepper, garlic powder to taste
+                </p>
+
+                <h4>Method</h4>
+                <ol>
+                    <li>Cook rice according to package instructions.</li>
+                    <li>Season chicken with salt, pepper, and garlic powder.</li>
+                    <li>Grill or bake chicken until fully cooked.</li>
+                    <li>Steam broccoli until tender.</li>
+                    <li>Assemble rice, chicken, and broccoli in a bowl, drizzle olive oil.</li>
+                </ol>
+
+                <h4>Nutritional Info (per serving)</h4>
+                <table class="nutrition-table">
+                    <tr>
+                        <th></th><th>Chicken Bowl</th>
+                    </tr>
+                    <tr>
+                        <td>Calories</td><td>650</td>
+                    </tr>
+                    <tr>
+                        <td>Protein</td><td>55g</td>
+                    </tr>
+                    <tr>
+                        <td>Carbs</td><td>60g</td>
+                    </tr>
+                    <tr>
+                        <td>Fat</td><td>15g</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- BULKING TIPS -->
+    <section class="cutting-section tips bg-photo tips-bg scroll-fade">
+        <h2 class="tips-title">Bulking Tips</h2>
+        <ul>
+            <li>Eat consistently and don’t skip meals.</li>
+            <li>Prioritize protein in every meal.</li>
+            <li>Train progressively heavier with proper form.</li>
+            <li>Get 7–9 hours of sleep for recovery.</li>
+            <li>Track calories and macros for steady gains.</li>
+        </ul>
+    </section>
+
+</div>
+
+<script>
+    const faders = document.querySelectorAll('.scroll-fade');
+
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(el => appearOnScroll.observe(el));
+</script>
+
+</body>
+</html>

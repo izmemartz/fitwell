@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitWell — About</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    
+<div id="temp-bg"></div>
+
+<!-- HEADER -->
+<header class="nav-blur fade-down">
+    <div class="logo">
+        <a href="home.html">
+            <img src="img/fitwell_logo1.PNG" class="logo-img">
+            </a>
+    </div>
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="fitpal.html" class="cta">FitPal AI</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="about-hero scroll-fade">
+    <h1>What is FitWell?</h1>
+    <p>Built to simplify wellness, empower beginners, and make healthy living accessible for everyone.</p>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about-container scroll-fade">
+
+    <h2>Our Goal</h2>
+    <p>
+        FitWell was founded with one clear goal in mind: to eliminate the uncertainty and overwhelm that often comes with starting a fitness journey.  
+        Millions of people want to work out, eat better, and get healthier, but they don't know where to start. FitWell aims to change that.
+    </p><br>
+    <p>
+        Our platform is dedicated to helping people live healthier, stronger, and more balanced lives through sustainable fitness and wellness habits. 
+        True well-being goes beyond appearance, it involves consistent routines, mental resilience, and a lifestyle that promotes long-term vitality.
+    </p>
+
+    <!-- MISSION -->
+    <h2>Our Mission</h2>
+    <p>
+        Our mission is to guide beginners toward a healthier lifestyle by providing clear, accessible, and beginner-friendly fitness and nutrition resources. 
+        FitWell seeks to empower individuals to build confidence, understand their bodies, and create habits that foster long-term health. 
+        We aim to remove the confusion from wellness by delivering simple tools, structured programs, and supportive guidance that encourage progress one step at a time.
+    </p>
+
+    <!-- VISION -->
+    <h2>Our Vision</h2>
+    <p>
+        Our vision is to become the most trusted and beginner-focused wellness platform, where anyone, regardless of experience or background, can confidently begin and sustain their journey toward better health. 
+        FitWell strives to create an initiative that believes in achievable transformation, prioritizes personal growth, and embraces wellness as a lifelong commitment rather than a short-term goal.
+    </p>
+
+    <h2>Why We Built FitWell?</h2>
+    <p>
+        Fitness information online can be complicated, contradictory, and intimidating.  
+        FitWell focuses on <strong>practical, straightforward guidance</strong> made specifically for beginners:
+    </p><br>
+    <ul>
+        <li>No extreme diets.</li>
+        <li>No unrealistic programs.</li>
+        <li>Just simple steps toward real progress.</li>
+    </ul>
+
+    <h2>Our Philosophy</h2>
+    <p>
+        FitWell believes in <strong>progress over perfection</strong>.  
+        Instead of expecting users to transform overnight, we encourage small, achievable improvements made consistently over time. 
+        Whether you're trying to lose weight, gain muscle, improve stamina, or simply feel better, FitWell meets you exactly where you are.
+    </p>
+
+    <h2>Who FitWell Is For?</h2>
+    <ul>
+        <li>Students</li>
+        <li>Beginners</li>
+        <li>Busy people</li>
+        <li>Anyone who wants an easier way to start their wellness journey</li>
+    </ul>
+
+
+</section>
+
+
+<script>
+    const faders = document.querySelectorAll('.scroll-fade');
+
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(el => appearOnScroll.observe(el));
+</script>
+
+</body>
+</html>

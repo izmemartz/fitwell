@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitWell — Nutrition</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="nutrition.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="nav-blur">
+        <div class="logo">
+            <a href="home.html">
+            <img src="img/fitwell_logo1.PNG" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="nutrition.html">Nutrition</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="fitpal.html" class="cta">FitPal AI</a>
+        </nav>
+    </header>
+
+    <section class="nutrition-split">
+    
+    <a href="cutting.html" class="nutri-card">
+        <video muted loop playsinline>
+            <source src="vids/cutting1.mp4" type="video/mp4">
+        </video>
+        <div class="nutri-overlay">Cutting</div>
+    </a>
+
+    <a href="bulking.html" class="nutri-card">
+        <video muted loop playsinline>
+            <source src="vids/bulking1.mp4" type="video/mp4">
+        </video>
+        <div class="nutri-overlay">Bulking</div>
+    </a>
+
+    <a href="omad.html" class="nutri-card">
+        <video muted loop playsinline>
+            <source src="vids/omad1.mp4" type="video/mp4">
+        </video>
+        <div class="nutri-overlay">OMAD</div>
+    </a>
+
+    <a href="keto.html" class="nutri-card">
+        <video muted loop playsinline>
+            <source src="vids/keto1.mp4" type="video/mp4">
+        </video>
+        <div class="nutri-overlay">Keto</div>
+    </a>
+
+</section>
+
+<script>
+document.querySelectorAll(".nutri-card").forEach(card => {
+    const video = card.querySelector("video");
+
+    card.addEventListener("mouseenter", () => video.play());
+    card.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+</script>
+
+</body>
+</html>

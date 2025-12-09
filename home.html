@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitWell — Home</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<!-- VIDEO BACKGROUND HERO -->
+<section class="hero-section">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="vids/jogging.mp4" type="video/mp4">
+    </video>
+
+    <!-- HEADER -->
+    <header class="nav-blur fade-down">
+        <div class="logo">
+            <a href="home.html">
+            <img src="img/fitwell_logo1.PNG" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="nutrition.html">Nutrition</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="fitpal.html" class="cta">FitPal AI</a>
+        </nav>
+    </header>
+
+    <!-- HERO CONTENT -->
+    <section class="hero slide-up">
+        <h1>Welcome to <span class="fitwell-highlight">FitWell</span></h1>
+        <p>Built to simplify wellness. <br> Empower beginners. <br> Make healthy living accessible for everyone.</p>
+
+    </section>
+</section>
+
+<section class="explore-section scroll-fade">
+    <h2>Explore Your Wellness</h2>
+</section>
+
+<section class="split nutrition-section scroll-fade">
+    <div class="split-text">
+        <h2>Nutrition</h2>
+        <p>Build healthy habits through balanced meals and real guidance.</p>
+        <a href="nutrition.html" class="split-btn">Learn More →</a>
+    </div>
+    <div class="split-img" style="background-image: url('img/nutrition1.jpg');"></div>
+</section>
+
+<section class="split workout-section reverse scroll-fade">
+    <div class="split-text">
+        <h2>Workouts</h2>
+        <p>Achieve your goals with beginner-friendly home workouts.</p>
+        <a href="workouts.html" class="split-btn">Start Training →</a>
+    </div>
+    <div class="split-img" style="background-image: url('img/workout1.jpg');"></div>
+</section>
+
+<section class="split ai-section scroll-fade">
+    <div class="split-text">
+        <h2>FitPal AI</h2>
+        <p>Your personal AI coach to guide you through wellness anytime.</p>
+        <a href="fitpal.html" class="split-btn">Chat Now →</a>
+    </div>
+    <div class="split-img" style="background-image: url('img/fitpal.jpg');"></div>
+</section>
+
+<footer class="scroll-fade">
+    <p>© 2025 FitWell. Group 1 - CC 101 - Introduction to Computing. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Select all elements we want to animate on scroll
+    const faders = document.querySelectorAll('.scroll-fade');
+
+    const appearOptions = {
+        threshold: 0.1, // how much of the element is visible
+        rootMargin: "0px 0px -50px 0px" // trigger slightly before fully visible
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            appearOnScroll.unobserve(entry.target); // stop observing after fade-in
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
+</body>
+</html>

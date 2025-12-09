@@ -1,0 +1,218 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background: #0d0d0d;
+    overflow-x: hidden;
+    text-align: justify;
+}
+
+/* TEMPORARY BACKGROUND */
+#temp-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #6ebde2, #0e202c);
+    z-index: -1;
+}
+
+/* NAVIGATION */
+header.nav-blur {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.25);
+    z-index: 20;
+    border-radius: 14px;
+}
+
+.logo-img { height: 55px; }
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #4fc3f7;
+}
+
+.cta {
+    padding: 8px 20px;
+    background: #4fc3f7;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+/* PAGE HERO (MATCHED SIZE WITH GYMWORKOUTS) */
+.page-hero {
+    padding-top: 160px;
+    padding-bottom: 80px;
+    text-align: center;
+    background: url("img/home1.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+/* Dark overlay (same as gymworkouts) */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* PAGE HERO (MATCH GYMWORKOUTS SIZE + TEXT) */
+.page-hero {
+    padding-top: 160px;
+    padding-bottom: 80px;
+    text-align: center;
+    background: url("img/home1.jpg") center/cover no-repeat;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Dark overlay – SAME as gym */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* ← You had .45 (same as gym, good) */
+    z-index: 1;
+}
+
+.page-hero h1,
+.page-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+/* MATCHED GYM TEXT SIZES */
+.page-hero h1 {
+    font-size: 3.8rem;       /* ← Gym size */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #f7fdff;          /* ← Gym color */
+    text-align: center;
+}
+
+.page-hero p {
+    font-size: 1.5rem;       /* ← Gym size */
+    color: #fff;
+    margin-top: 15px;
+}
+
+
+/* SECTIONS */
+.workout-section {
+    width: 100%;
+    padding: 80px 10%;
+}
+
+.no-equip-day,
+.equip-day {
+    background: linear-gradient(135deg, #e7e4e4, #72c4eb);
+    color: #111;
+    border-radius: 20px;
+}
+
+/* HEADINGS */
+.workout-section h2 {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* EXERCISE CARDS */
+.exercise-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255,255,255,0.2);
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+    transition: .3s;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+}
+
+.exercise-info { flex: 1 1 350px; }
+
+.exercise-info h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.exercise-info p {
+    font-size: 1.35rem;
+    line-height: 1.9;
+}
+
+/* VIDEO WRAPPER */
+.exercise-video {
+    flex: 1 1 350px;
+    max-width: 360px;
+    margin-left: 30px;
+}
+
+/* VIDEO INSIDE */
+.workout-video {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+}
+
+/* FLOATING ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* SCROLL FADE */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .8s ease-out;
+}
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .exercise-card { flex-direction: column; }
+    .exercise-video { margin-left: 0; margin-top: 20px; }
+    .page-hero h1 { font-size: 3rem; }
+}
